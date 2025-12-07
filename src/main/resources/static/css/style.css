@@ -1,0 +1,133 @@
+/* 전체 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* 헤더 영역 */
+header {
+    padding: 16px 24px;
+    background: #222;
+    color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header .controls {
+    margin-top: 12px;
+}
+
+header .controls input {
+    padding: 6px 8px;
+    font-size: 14px;
+    width: 180px;
+}
+
+header .controls button {
+    padding: 7px 12px;
+    margin-left: 4px;
+    font-size: 14px;
+    border: none;
+    background-color: #ff6b00;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+header .controls button:hover {
+    background-color: #e05f00;
+}
+
+/* 메인 레이아웃 */
+main {
+    display: flex;
+    height: calc(100vh - 80px); /* 헤더 제외 전체 화면 채우기 */
+}
+
+/* 지도 영역 */
+#map {
+    flex: 7;
+    min-width: 60%;
+    height: 100%;
+}
+
+/* 리스트 영역 */
+#list {
+    flex: 3;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-left: 1px solid #ddd;
+    padding: 12px 12px 16px 12px;
+    overflow-y: auto;
+}
+
+#list h3 {
+    margin: 4px 0 12px 0;
+    font-size: 18px;
+}
+
+/* 장소 리스트 */
+#places {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#places li {
+    padding: 8px 4px 10px 4px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+#places li strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+#places li small {
+    color: #666;
+}
+
+#places li a {
+    font-size: 12px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#places li a:hover {
+    text-decoration: underline;
+}
+
+/* 페이징 영역 */
+#pagination {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 3px;
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#pagination button.active {
+    font-weight: 700;
+    border-color: #ff6b00;
+}
+
+#pagination button:hover {
+    background-color: #f0f0f0;
+}

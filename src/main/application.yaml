@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+app:
+  grtc:
+    base-url: "https://api.grtc.co.kr"
+    service-key: "YOUR_GRTC_SERVICE_KEY"
+  kakao:
+    rest-key: "1d0c17f0b246a5cc9bf29124655fc556"
