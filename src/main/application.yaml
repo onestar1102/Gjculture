@@ -2,8 +2,21 @@ server:
   port: 8080
 
 app:
+  # 광주교통공사 Open API 설정
+  # 공공데이터포털: https://www.data.go.kr/data/15109244/openapi.do
   grtc:
-    base-url: "https://api.grtc.co.kr"
-    service-key: "YOUR_GRTC_SERVICE_KEY"
+    # ⚠️ 실제로는 사용하지 않음 (코드에서 직접 URL 구성)
+    base-url: "http://apis.data.go.kr/6290000/gjCulturePlaceService"
+    # ✅ 공공데이터포털에서 발급받은 서비스 키 입력 (필수!)
+    service-key: "여기에_발급받은_서비스키를_입력하세요"
+
+  # 카카오 REST API 키 (지도 및 로컬 검색용)
+  # https://developers.kakao.com 에서 발급
   kakao:
     rest-key: "1d0c17f0b246a5cc9bf29124655fc556"
+
+# 로깅 설정 (선택사항)
+logging:
+  level:
+    com.example.gjculture: DEBUG  # 디버그 로그 활성화
+    org.springframework.web: INFO
