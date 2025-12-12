@@ -1,9 +1,14 @@
 server:
   port: 8080
+  logging:
+    level:
+      com:
+        example:
+          gjculture=DEBUG:
 
 app:
   grtc:
-    base-url: "https://api.grtc.co.kr"
-    service-key: "YOUR_GRTC_SERVICE_KEY"
+    base-url: "apis.data.go.kr/B551232/OAMS_CLTPLCE_01"
+    service-key: "no2XhuWFJAc1%2F%2Fa9X0T%2F76NllkASaSKNyw%2BkM5pBP2K7kZsqcb1GfhAuin0%2Ft4gVvqD9T8o%2FKU6f6rVcYNMoAw%3D%3D"
   kakao:
     rest-key: "1d0c17f0b246a5cc9bf29124655fc556"

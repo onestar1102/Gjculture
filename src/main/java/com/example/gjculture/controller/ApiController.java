@@ -2,7 +2,6 @@ package com.example.gjculture.controller;
 
 import com.example.gjculture.dto.CulturePlaceDto;
 import com.example.gjculture.service.CulturePlaceService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
@@ -19,18 +18,11 @@ public class ApiController {
     }
 
     @GetMapping("/nearby")
-    public Mono<ResponseEntity<List<CulturePlaceDto>>> getNearby(
+    public Mono<List<CulturePlaceDto>> nearby(
             @RequestParam String station,
-            @RequestParam(defaultValue = "1") int page
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "10") int size
     ) {
-        int pageSize = 10;
-        int skip = (page - 1) * pageSize;
-
-        return service.getPlacesNearStation(station)
-                .map(all -> all.stream()
-                        .skip(skip)
-                        .limit(pageSize)
-                        .toList())
-                .map(ResponseEntity::ok);
+        return service.getPlaces(station, page, size);
     }
 }

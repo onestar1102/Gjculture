@@ -1,23 +1,25 @@
 package com.example.gjculture.dto;
 
 public class CulturePlaceDto {
-    private String placeName;
-    private double distance; // 미터 단위
-    private double latitude;
-    private double longitude;
-    private String category;
-    private String address;
+    public String placeName;
+    public double distance; // 미터 단위
+    public double latitude;
+    public double longitude;
+    public String category;
+    public String address;
+    public String locplc;
 
     public CulturePlaceDto() {}
 
     public CulturePlaceDto(String placeName, double distance, double latitude,
-                           double longitude, String category, String address) {
+                           double longitude, String category, String address, String locplc) {
         this.placeName = placeName;
         this.distance = distance;
         this.latitude = latitude;
         this.longitude = longitude;
         this.category = category;
         this.address = address;
+        this.locplc = locplc;
     }
 
     public String getPlaceName() { return placeName; }
